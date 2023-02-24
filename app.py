@@ -1,7 +1,7 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, jsonify
 import os
 import openai
-from ai_cam import cam
+from ai_cam import cam, free_cam
 
 openai.api_key = "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"
 
@@ -61,11 +61,12 @@ def chatbot():
             print(ai.context)
             value = ai.create_response(value)
             print(ai.to_text(backwords=False))
-            return {'text': value}
+            return jsonify({'text': value})
     except Exception as e:
         print(e)
         return render_template('chatbot.html', title='챗봇 서비스')
 
 
 if __name__ == '__main__':
-    app.run('0.0.0.0', port=80, debug=True)
+    app.run('0.0.0.0', port=8000)
+    free_cam()
