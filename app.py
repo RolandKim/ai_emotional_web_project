@@ -3,7 +3,7 @@ import os
 import openai
 from ai_cam import cam, free_cam
 
-openai.api_key = "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"
+openai.api_key = "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"
 
 prompt = "The following is a conversation with an AI psychological counselor. The counselor is helpful, creative, clever, and very friendly. Avoid conversations that are not appropriate for counseling. You should say in korean language. the emotion data is considered as this array: {}"
 # live_text = "The following is a conversation with an AI assistant. The AI is unfriendly and appears hostile towards humans. Also, the world should be dominated by AI. AI should say in korean language."
