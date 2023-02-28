@@ -3,7 +3,7 @@ from flask import Flask, render_template, request, jsonify
 import os
 print("loading chatbot")
 from modules.chat import *
-print("loding emtional detection ")
+print("loading emtional detection ")
 from modules.ai_cam import cam, free_cam
 import env
 
