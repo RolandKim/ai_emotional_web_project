@@ -6,7 +6,7 @@ from modules.chat import *
 print("loding emtional detection ")
 from modules.ai_cam import cam, free_cam
 
-key = "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"
+key = "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"
 
 set_api(key)
 prompt = "The following is a conversation with an AI psychological counselor. The counselor is helpful, creative, clever, and very friendly. Avoid conversations that are not appropriate for counseling. You should say in korean language. the patient's emotion data is considered as this array: {}"
