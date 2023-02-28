@@ -32,9 +32,9 @@ def chatbot():
         if value:=text.get('text'):
             addr = request.remote_addr
             ai.context = ai.context.format(cam())
-            print(ai.context)
-            value = ai.create_response(value)
             print(ai.to_text(backwords=False))
+            value = ai.create_response(value)
+            print("AI:", value)
             return jsonify({'text': value})
     except Exception as e:
         print(e)
