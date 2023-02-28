@@ -1,9 +1,12 @@
+print("loading flask...")
 from flask import Flask, render_template, request, jsonify
 import os
+print("loading chatbot")
 from modules.chat import *
+print("loding emtional detection ")
 from modules.ai_cam import cam, free_cam
 
-key = "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"
+key = "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"
 
 set_api(key)
 prompt = "The following is a conversation with an AI psychological counselor. The counselor is helpful, creative, clever, and very friendly. Avoid conversations that are not appropriate for counseling. You should say in korean language. the patient's emotion data is considered as this array: {}"
