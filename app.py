@@ -33,9 +33,9 @@ def chatbot():
             addr = request.remote_addr
             ai.context = ai.context.format(cam())
             print(ai.to_text(backwords=False))
-            value = ai.create_response(value)
-            print("AI:", value)
-            return jsonify({'text': value})
+            result = ai.create_response(value)
+            print("AI:", result)
+            return jsonify({'text': result})
     except Exception as e:
         print(e)
         return render_template('chatbot.html', title='챗봇 서비스')
